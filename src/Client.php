@@ -2,12 +2,9 @@
 
 namespace Mobly\Boletoflex\Sdk;
 
-use GuzzleHttp\Client as GuzzleClient;
-use GuzzleHttp\RequestOptions as GuzzleOptions;
-use Mobly\Boletoflex\Sdk\Entities\Buyer;
-use Mobly\Boletoflex\Sdk\Entities\Payment;
-use Mobly\Boletoflex\Sdk\Entities\Shipping;
 use Mobly\Boletoflex\Sdk\Transactions\PreApproval;
+use Mobly\Boletoflex\Sdk\Transactions\VerifyFundingStatus;
+use Mobly\Boletoflex\Sdk\Transactions\VerifyStatus;
 
 /**
  * Client class
@@ -19,7 +16,7 @@ use Mobly\Boletoflex\Sdk\Transactions\PreApproval;
  *
  */
 
-class Client
+class Client extends AbstractClient
 {
 
     /**
@@ -34,12 +31,11 @@ class Client
         $address = $preApproval->getShipping()->getAddress();
         $payment = $preApproval->getPayment();
 
-        $client = new GuzzleClient();
-        $response = $client->request(
-            'POST',
-            'https://api-checkout.vality.com.br/transactions/qualify',
+        $response = $this->client->request(
+            self::POST,
+            self::ENDPOINT_PRE_APPROVAL,
             [
-                GuzzleOptions::JSON => [
+                self::JSON => [
                     'buyer' => [
                         'cpf' => $buyer->getCpf()
                     ],
@@ -60,29 +56,25 @@ class Client
         return $response;
     }
 
+    /**
+     * @param VerifyFundingStatus $verifyFundingStatus
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return \GuzzleHttp\Psr7\Response
+     */
+    public function verifyFundingStatus(VerifyFundingStatus $verifyFundingStatus)
+    {
+        $url = sprintf(
+            self::ENDPOINT_STATUS,
+            $verifyFundingStatus->getIdTransaction()
+        );
+
+        $response = $this->client->request(
+            self::GET,
+            $url
+        );
+
+        return $response;
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

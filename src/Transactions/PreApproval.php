@@ -7,7 +7,7 @@ use Mobly\Boletoflex\Sdk\Entities\Shipping;
 use Mobly\Boletoflex\Sdk\Entities\Payment;
 
 
-class PreApproval
+class PreApproval extends AbstractTransaction
 {
 
     /**
