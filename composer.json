@@ -1,0 +1,26 @@
+{
+    "name": "mobly/boletoflex-sdk",
+    "description": "Boletoflex SDK Integration",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Mobly\\Boletoflex\\Sdk\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "guzzlehttp/guzzle": "^6.3",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "monolog/monolog": "^1.24"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mobly Developers",
+            "email": "dev@mobly.com.br"
+        }
+    ],
+    "minimum-stability": "stable"
+}
