@@ -1,5 +1,5 @@
 {
-    "name": "mobly/boletoflex-sdk",
+    "name": "mobly/boleto-flex",
     "description": "Boletoflex SDK Integration",
     "type": "library",
     "autoload": {
