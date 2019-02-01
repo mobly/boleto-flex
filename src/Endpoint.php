@@ -16,4 +16,9 @@ interface Endpoint
      */
     const ENDPOINT_PRE_APPROVAL = 'https://api-checkout.vality.com.br/transactions/qualify';
 
+    /**
+     * @const string
+     */
+    const ENDPOINT_TRANSACTION = 'https://api-checkout.vality.com.br/transactions';
+
 }
