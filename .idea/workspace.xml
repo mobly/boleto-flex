@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b3114a8a-0dc7-47e2-820e-8ebcfbdbe0fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Endpoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Endpoint.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Buyer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Buyer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Shipping.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Shipping.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transactions/Transaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transactions/Transaction.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="21">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#50#82#0#PHP" expanded="true" />
               </folding>
@@ -50,7 +42,6 @@
         <option value="$PROJECT_DIR$/src/Transactions/PreApproval.php" />
         <option value="$PROJECT_DIR$/src/AbstractClient.php" />
         <option value="$PROJECT_DIR$/src/Transactions/VerifyStatus.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Entities/Buyer.php" />
         <option value="$PROJECT_DIR$/src/Entities/Seller.php" />
         <option value="$PROJECT_DIR$/src/Entities/Shipping.php" />
@@ -64,6 +55,7 @@
         <option value="$PROJECT_DIR$/src/Endpoint.php" />
         <option value="$PROJECT_DIR$/src/Client.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -100,23 +92,6 @@
             <path>
               <item name="boletoflex-sdk" type="b2602c69:ProjectViewProjectNode" />
               <item name="boletoflex-sdk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boletoflex-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boletoflex-sdk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boletoflex-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boletoflex-sdk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boletoflex-sdk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boletoflex-sdk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Transactions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -162,12 +137,12 @@
       <workItem from="1548960278263" duration="616000" />
       <workItem from="1548963164881" duration="1624000" />
       <workItem from="1549015719138" duration="5379000" />
-      <workItem from="1549021482919" duration="1576000" />
+      <workItem from="1549021482919" duration="1879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22949000" />
+    <option name="totallyTimeSpent" value="23252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="-11" width="1883" height="1092" extended-state="6" />
@@ -214,13 +189,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Transaction.php" />
     <entry file="file://$PROJECT_DIR$/src/Response.php" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Transactions/AbstractTransaction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -344,10 +312,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#50#82#0#PHP" expanded="true" />
           </folding>
