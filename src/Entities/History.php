@@ -2,7 +2,7 @@
 
 namespace Mobly\Boletoflex\Sdk\Entities;
 
-class History
+class History extends AbstractEntity
 {
 
     /**

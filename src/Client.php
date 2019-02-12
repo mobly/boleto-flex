@@ -2,9 +2,10 @@
 
 namespace Mobly\Boletoflex\Sdk;
 
+use Mobly\Boletoflex\Sdk\Entities\AbstractEntity;
 use Mobly\Boletoflex\Sdk\Entities\Cart;
 use Mobly\Boletoflex\Sdk\Entities\CartItem;
-use Mobly\Boletoflex\Sdk\Entities\History;
+use Mobly\Boletoflex\Sdk\Entities\EmptyEntity;
 use Mobly\Boletoflex\Sdk\Entities\HistoryItem;
 use Mobly\Boletoflex\Sdk\Transactions\PreApproval;
 use Mobly\Boletoflex\Sdk\Transactions\Transaction;
@@ -77,7 +78,7 @@ class Client extends AbstractClient
 
         $response = $this->client->request(
             self::POST,
-            self::ENDPOINT_TRANSACTION,
+            $this->getRealPath(self::ENDPOINT_TRANSACTION),
             [
                 self::JSON => $content
             ]
@@ -111,11 +112,15 @@ class Client extends AbstractClient
     }
 
     /**
-     * @param History $history
+     * @param AbstractEntity $history
      * @return array
      */
-    private function buildHistoryTransaction(History $history)
+    private function buildHistoryTransaction(AbstractEntity $history)
     {
+        if ($history instanceof EmptyEntity) {
+            return [];
+        }
+
         $content = [];
         $items = $history->getItems();
 
@@ -200,7 +205,9 @@ class Client extends AbstractClient
     public function verifyFundingStatus(VerifyFundingStatus $verifyFundingStatus)
     {
         $url = sprintf(
-            self::ENDPOINT_STATUS,
+            $this->getRealPath(
+                self::ENDPOINT_STATUS
+            ),
             $verifyFundingStatus->getIdTransaction()
         );
 
@@ -212,4 +219,12 @@ class Client extends AbstractClient
         return $response;
     }
 
+    /**
+     * @param $path
+     * @return string
+     */
+    private function getRealPath($path)
+    {
+        return $this->getHost() . $path;
+    }
 }

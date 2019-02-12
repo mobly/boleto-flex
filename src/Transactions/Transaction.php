@@ -3,6 +3,7 @@
 namespace Mobly\Boletoflex\Sdk\Transactions;
 
 
+use Mobly\Boletoflex\Sdk\Entities\AbstractEntity;
 use Mobly\Boletoflex\Sdk\Entities\Buyer;
 use Mobly\Boletoflex\Sdk\Entities\Cart;
 use Mobly\Boletoflex\Sdk\Entities\History;
@@ -174,9 +175,9 @@ class Transaction extends AbstractTransaction
     }
 
     /**
-     * @param History $history
+     * @param AbstractEntity $history
      */
-    public function setHistory(History $history)
+    public function setHistory(AbstractEntity $history)
     {
         $this->history = $history;
     }

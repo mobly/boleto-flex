@@ -7,7 +7,6 @@ use GuzzleHttp\RequestOptions;
 
 abstract class AbstractClient implements Endpoint
 {
-
     /**
      * @const string
      */
@@ -28,9 +27,30 @@ abstract class AbstractClient implements Endpoint
      */
     protected $client;
 
-    public function __construct()
+    /**
+     * @var string
+     */
+    protected $host;
+
+    public function __construct($host)
     {
+        $this->host = $host;
         $this->client = new Client();
     }
 
+    /**
+     * @return mixed
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * @param mixed $host
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+    }
 }

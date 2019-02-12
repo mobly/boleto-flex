@@ -16,7 +16,7 @@ use Mobly\Boletoflex\Sdk\Entities\CartItem;
 use Mobly\Boletoflex\Sdk\Entities\History;
 use Mobly\Boletoflex\Sdk\Entities\HistoryItem;
 
-$client = new Client();
+$client = new Client('https://api-checkout.vality.com.br');
 
 // Payment transaction
 $buyer = new Buyer();
