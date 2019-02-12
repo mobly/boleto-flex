@@ -173,7 +173,7 @@ class Client extends AbstractClient
 
         $response = $this->client->request(
             self::POST,
-            self::ENDPOINT_PRE_APPROVAL,
+            $this->getRealPath(self::ENDPOINT_PRE_APPROVAL),
             [
                 self::JSON => [
                     'buyer' => [
