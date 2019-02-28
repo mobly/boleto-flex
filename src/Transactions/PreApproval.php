@@ -3,6 +3,7 @@
 namespace Mobly\Boletoflex\Sdk\Transactions;
 
 use Mobly\Boletoflex\Sdk\Entities\Buyer;
+use Mobly\Boletoflex\Sdk\Entities\Seller;
 use Mobly\Boletoflex\Sdk\Entities\Shipping;
 use Mobly\Boletoflex\Sdk\Entities\Payment;
 
@@ -24,6 +25,11 @@ class PreApproval extends AbstractTransaction
      * @var Payment $payment;
      */
     protected $payment;
+
+    /**
+     * @var string
+     */
+    protected $seller;
 
     /**
      * @return Buyer
@@ -73,4 +79,19 @@ class PreApproval extends AbstractTransaction
         $this->payment = $payment;
     }
 
+    /**
+     * @return string
+     */
+    public function getSeller()
+    {
+        return $this->seller;
+    }
+
+    /**
+     * @param Seller $seller
+     */
+    public function setSeller(Seller $seller)
+    {
+        $this->seller = $seller;
+    }
 }

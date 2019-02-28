@@ -124,6 +124,7 @@ try {
 
 // Pre Approval
 $preApprovalTransaction = new PreApproval();
+$preApprovalTransaction->setSeller($seller);
 
 $buyer = new Buyer();
 $buyer->setCpf('21846764890');
