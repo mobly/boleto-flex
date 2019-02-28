@@ -2,8 +2,7 @@
 
 namespace Mobly\Boletoflex\Sdk\Entities;
 
-
-class Address
+class Address extends AbstractEntity
 {
 
     /**

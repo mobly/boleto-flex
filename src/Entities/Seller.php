@@ -3,7 +3,7 @@
 namespace Mobly\Boletoflex\Sdk\Entities;
 
 
-class Seller
+class Seller extends AbstractEntity
 {
 
     /**

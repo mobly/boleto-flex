@@ -3,7 +3,7 @@
 namespace Mobly\Boletoflex\Sdk\Entities;
 
 
-class Buyer
+class Buyer extends AbstractEntity
 {
 
     /**

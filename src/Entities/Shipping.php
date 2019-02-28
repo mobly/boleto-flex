@@ -3,7 +3,7 @@
 namespace Mobly\Boletoflex\Sdk\Entities;
 
 
-class Shipping
+class Shipping extends AbstractEntity
 {
 
     /**

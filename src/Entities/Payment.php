@@ -2,8 +2,7 @@
 
 namespace Mobly\Boletoflex\Sdk\Entities;
 
-
-class Payment
+class Payment extends AbstractEntity
 {
 
     /**
