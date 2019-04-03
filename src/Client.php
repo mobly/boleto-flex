@@ -167,29 +167,11 @@ class Client extends AbstractClient
      */
     public function preApproval(PreApproval $preApproval)
     {
-        $buyer = $preApproval->getBuyer();
-        $address = $preApproval->getShipping()->getAddress();
-        $payment = $preApproval->getPayment();
-
         $response = $this->client->request(
             self::POST,
             $this->getRealPath(self::ENDPOINT_PRE_APPROVAL),
             [
-                self::JSON => [
-                    'buyer' => [
-                        'cpf' => $buyer->getCpf()
-                    ],
-                    'shipping' => [
-                        'address' => [
-                            'city' => $address->getCity(),
-                            'state' => $address->getState(),
-                            'zip' => $address->getZip()
-                        ]
-                    ],
-                    'payment' => [
-                        'amount' => $payment->getAmount()
-                    ]
-                ]
+                self::JSON => $preApproval->toArray(false)
             ]
         );
 
