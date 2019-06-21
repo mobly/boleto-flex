@@ -7,6 +7,7 @@ use Mobly\Boletoflex\Sdk\Entities\Cart;
 use Mobly\Boletoflex\Sdk\Entities\CartItem;
 use Mobly\Boletoflex\Sdk\Entities\EmptyEntity;
 use Mobly\Boletoflex\Sdk\Entities\HistoryItem;
+use Mobly\Boletoflex\Sdk\Entities\Service;
 use Mobly\Boletoflex\Sdk\Transactions\PreApproval;
 use Mobly\Boletoflex\Sdk\Transactions\Transaction;
 use Mobly\Boletoflex\Sdk\Transactions\VerifyFundingStatus;
@@ -67,6 +68,9 @@ class Client extends AbstractClient
                 'amount' => $payment->getAmount(),
                 'discount' => $payment->getDiscount(),
                 'cart' => $payment->getCart(),
+                'other' => $this->buildServicePayment(
+                    $payment->getService()
+                ),
             ],
             'cart' => $this->buildCartTransaction(
                 $transaction->getCart()
@@ -85,6 +89,28 @@ class Client extends AbstractClient
         );
 
         return $response;
+    }
+
+    /**
+     * @param array $services
+     * @return array
+     */
+    private function buildServicePayment(array $services)
+    {
+        $content = [];
+
+        foreach ($services as $service) {
+            if (!$service instanceof Service) {
+                continue;
+            }
+
+            $content[] = [
+                'description' => $service->getDescription(),
+                'amount' => round($service->getAmount(), 2),
+            ];
+        }
+
+        return $content;
     }
 
     /**

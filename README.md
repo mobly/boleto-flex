@@ -45,10 +45,15 @@ $shipping = new Shipping();
 $shipping->setAmount(35.00);
 $shipping->setAddress($address);
 
+$service = new Service();
+$service->setDescription('Montagem');
+$service->setAmount(150.00);
+
 $payment = new Payment();
 $payment->setAmount(1174.98);
 $payment->setDiscount(50.00);
 $payment->setCart(1189.98);
+$payment->addService($service);
 
 $cartItem = new CartItem();
 $cartItem->setAmount(289.99);

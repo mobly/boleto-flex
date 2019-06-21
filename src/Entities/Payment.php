@@ -21,6 +21,11 @@ class Payment extends AbstractEntity
     protected $cart;
 
     /**
+     * @var array
+     */
+    protected $service;
+
+    /**
      * @return float
      */
     public function getAmount()
@@ -66,6 +71,22 @@ class Payment extends AbstractEntity
     public function setCart($cart)
     {
         $this->cart = $cart;
+    }
+
+    /**
+     * @return array
+     */
+    public function getService()
+    {
+        return $this->service;
+    }
+
+    /**
+     * @param Service $service
+     */
+    public function addService(Service $service)
+    {
+        $this->service[] = $service;
     }
 
 }
