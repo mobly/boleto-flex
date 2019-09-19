@@ -1,5 +1,9 @@
-# Mobly BoletoFlex-SDK
+<p align="center">
+    <img src="https://www.mobly.com.br/images/mobly4/logo-mobly4.svg" width="250">
+</p>
 
+# Mobly BoletoFlex-SDK
+Simple SDK to make an standardize boleto flex partner integration
 
 ## How to use
 

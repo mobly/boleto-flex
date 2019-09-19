@@ -12,7 +12,8 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
-        "monolog/monolog": "^1.24"
+        "monolog/monolog": "^1.24",
+        "phpunit/phpunit": "^6.5"
     },
     "license": "proprietary",
     "authors": [

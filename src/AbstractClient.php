@@ -35,7 +35,6 @@ abstract class AbstractClient implements Endpoint
     public function __construct($host)
     {
         $this->host = $host;
-        $this->client = new Client();
     }
 
     /**
@@ -52,5 +51,25 @@ abstract class AbstractClient implements Endpoint
     public function setHost($host)
     {
         $this->host = $host;
+    }
+
+    /**
+     * @return Client
+     */
+    public function getClient()
+    {
+        if (null === $this->client) {
+            $this->client = new Client();
+        }
+
+        return $this->client;
+    }
+
+    /**
+     * @param Client $client
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
     }
 }

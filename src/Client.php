@@ -80,7 +80,7 @@ class Client extends AbstractClient
             )
         ];
 
-        $response = $this->client->request(
+        $response = $this->getClient()->request(
             self::POST,
             $this->getRealPath(self::ENDPOINT_TRANSACTION),
             [
@@ -193,7 +193,7 @@ class Client extends AbstractClient
      */
     public function preApproval(PreApproval $preApproval)
     {
-        $response = $this->client->request(
+        $response = $this->getClient()->request(
             self::POST,
             $this->getRealPath(self::ENDPOINT_PRE_APPROVAL),
             [
@@ -219,7 +219,7 @@ class Client extends AbstractClient
             $verifyFundingStatus->getIdTransaction()
         );
 
-        $response = $this->client->request(
+        $response = $this->getClient()->request(
             self::GET,
             $url
         );
