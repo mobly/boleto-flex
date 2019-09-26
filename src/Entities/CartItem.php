@@ -130,5 +130,4 @@ class CartItem
     {
         $this->category = $category;
     }
-
 }

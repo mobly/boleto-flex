@@ -172,6 +172,4 @@ class Address extends AbstractEntity
     {
         $this->complement = $complement;
     }
-
-
 }

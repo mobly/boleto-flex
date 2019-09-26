@@ -46,5 +46,4 @@ class Service
     {
         $this->amount = $amount;
     }
-
 }

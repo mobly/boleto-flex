@@ -25,5 +25,4 @@ class Seller extends AbstractEntity
     {
         $this->name = $name;
     }
-
 }

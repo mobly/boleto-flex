@@ -19,5 +19,4 @@ interface Endpoint
      * @const string
      */
     const ENDPOINT_TRANSACTION = '/transactions';
-
 }

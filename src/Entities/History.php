@@ -25,5 +25,4 @@ class History extends AbstractEntity
     {
         return $this->items;
     }
-
 }

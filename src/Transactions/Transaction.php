@@ -202,5 +202,4 @@ class Transaction extends AbstractTransaction
     {
         $this->source = $source;
     }
-
 }
