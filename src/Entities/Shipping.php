@@ -2,7 +2,6 @@
 
 namespace Mobly\Boletoflex\Sdk\Entities;
 
-
 class Shipping extends AbstractEntity
 {
 
@@ -45,5 +44,4 @@ class Shipping extends AbstractEntity
     {
         $this->amount = $amount;
     }
-
 }

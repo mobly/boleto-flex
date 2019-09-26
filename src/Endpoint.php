@@ -2,7 +2,6 @@
 
 namespace Mobly\Boletoflex\Sdk;
 
-
 interface Endpoint
 {
 

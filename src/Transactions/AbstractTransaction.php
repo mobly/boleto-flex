@@ -2,7 +2,6 @@
 
 namespace Mobly\Boletoflex\Sdk\Transactions;
 
-
 use Mobly\Boletoflex\Sdk\Entities\AbstractEntity;
 
 abstract class AbstractTransaction

@@ -152,7 +152,6 @@ class Client extends AbstractClient
 
         /** @var HistoryItem $item */
         foreach ($items as $item) {
-
             $cart = [];
 
             /** @var CartItem $cartItem */

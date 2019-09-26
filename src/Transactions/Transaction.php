@@ -2,7 +2,6 @@
 
 namespace Mobly\Boletoflex\Sdk\Transactions;
 
-
 use Mobly\Boletoflex\Sdk\Entities\AbstractEntity;
 use Mobly\Boletoflex\Sdk\Entities\Buyer;
 use Mobly\Boletoflex\Sdk\Entities\Cart;

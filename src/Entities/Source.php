@@ -2,7 +2,6 @@
 
 namespace Mobly\Boletoflex\Sdk\Entities;
 
-
 class Source extends AbstractEntity
 {
     /**
@@ -25,6 +24,4 @@ class Source extends AbstractEntity
     {
         $this->name = $name;
     }
-
-
 }
