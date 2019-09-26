@@ -2,7 +2,6 @@
 
 namespace Mobly\Boletoflex\Sdk\Entities;
 
-
 class Buyer extends AbstractEntity
 {
 
@@ -89,5 +88,4 @@ class Buyer extends AbstractEntity
     {
         $this->email = $email;
     }
-
 }

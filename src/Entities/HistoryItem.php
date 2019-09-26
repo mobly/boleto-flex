@@ -109,5 +109,4 @@ class HistoryItem
     {
         $this->shipping = $shipping;
     }
-
 }

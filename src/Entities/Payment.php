@@ -88,5 +88,4 @@ class Payment extends AbstractEntity
     {
         $this->service[] = $service;
     }
-
 }
