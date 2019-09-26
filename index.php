@@ -3,6 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Mobly\Boletoflex\Sdk\Client;
+use Mobly\Boletoflex\Sdk\Entities\Source;
 use Mobly\Boletoflex\Sdk\Transactions\PreApproval;
 use Mobly\Boletoflex\Sdk\Entities\Buyer;
 use Mobly\Boletoflex\Sdk\Entities\Shipping;
@@ -94,6 +95,9 @@ $historyItem->setCart($historyCart);
 $history = new History();
 $history->addItem($historyItem);
 
+$source = new Source();
+$source->setName('your-source');
+
 $transaction = new Transaction();
 $transaction->setReference('00004122');
 $transaction->setCurrency('BRL');
@@ -103,6 +107,7 @@ $transaction->setHistory($history);
 $transaction->setShipping($shipping);
 $transaction->setBuyer($buyer);
 $transaction->setPayment($payment);
+$transaction->setSource($source);
 
 try {
     $response = $client->transaction($transaction);

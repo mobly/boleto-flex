@@ -10,6 +10,7 @@ use Mobly\Boletoflex\Sdk\Entities\History;
 use Mobly\Boletoflex\Sdk\Entities\Payment;
 use Mobly\Boletoflex\Sdk\Entities\Shipping;
 use Mobly\Boletoflex\Sdk\Entities\Seller;
+use Mobly\Boletoflex\Sdk\Entities\Source;
 
 class Transaction extends AbstractTransaction
 {
@@ -53,6 +54,11 @@ class Transaction extends AbstractTransaction
      * @var History
      */
     protected $history;
+
+    /**
+     * @var Source $source
+     */
+    protected $source;
 
     /**
      * @return Buyer
@@ -180,6 +186,22 @@ class Transaction extends AbstractTransaction
     public function setHistory(AbstractEntity $history)
     {
         $this->history = $history;
+    }
+
+    /**
+     * @return Source
+     */
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param Source $source
+     */
+    public function setSource(Source $source)
+    {
+        $this->source = $source;
     }
 
 }
