@@ -38,6 +38,7 @@ class Client extends AbstractClient
         $shipping = $transaction->getShipping();
         $shippingAddress = $shipping->getAddress();
         $payment = $transaction->getPayment();
+        $source = $transaction->getSource();
 
         $content = [
             'buyer' => [
@@ -49,6 +50,9 @@ class Client extends AbstractClient
             'reference' => $transaction->getReference(),
             'seller' => [
                 'name' => $seller->getName()
+            ],
+            'source' => [
+                'name' => $source->getName(),
             ],
             'shipping' => [
                 'amount' => $shipping->getAmount(),
