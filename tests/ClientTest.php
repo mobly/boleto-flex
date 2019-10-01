@@ -12,6 +12,7 @@ use Mobly\Boletoflex\Sdk\Entities\Payment;
 use Mobly\Boletoflex\Sdk\Entities\Seller;
 use Mobly\Boletoflex\Sdk\Entities\Service;
 use Mobly\Boletoflex\Sdk\Entities\Shipping;
+use Mobly\Boletoflex\Sdk\Entities\Source;
 use Mobly\Boletoflex\Sdk\Transactions\Transaction;
 use PHPUnit\Framework\TestCase;
 
@@ -51,6 +52,9 @@ class ClientTest extends TestCase
         );
         $transaction->setHistory(
             new EmptyEntity()
+        );
+        $transaction->setSource(
+            new Source()
         );
         $transaction->setPayment($payment);
         $transaction->setCart($cart);
