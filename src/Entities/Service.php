@@ -2,7 +2,7 @@
 
 namespace Mobly\Boletoflex\Sdk\Entities;
 
-class Service
+class Service extends AbstractEntity
 {
 
     /**
