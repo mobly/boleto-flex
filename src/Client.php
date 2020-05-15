@@ -9,6 +9,7 @@ use Mobly\Boletoflex\Sdk\Entities\EmptyEntity;
 use Mobly\Boletoflex\Sdk\Entities\HistoryItem;
 use Mobly\Boletoflex\Sdk\Entities\Service;
 use Mobly\Boletoflex\Sdk\Transactions\PreApproval;
+use Mobly\Boletoflex\Sdk\Transactions\Simulate;
 use Mobly\Boletoflex\Sdk\Transactions\Transaction;
 use Mobly\Boletoflex\Sdk\Transactions\VerifyFundingStatus;
 
@@ -201,6 +202,24 @@ class Client extends AbstractClient
             $this->getRealPath(self::ENDPOINT_PRE_APPROVAL),
             [
                 self::JSON => $preApproval->toArray(false)
+            ]
+        );
+
+        return $response;
+    }
+    /**
+     * @param Simulate $simulate
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return \GuzzleHttp\Psr7\Response
+     */
+    public function simulate(Simulate $simulate)
+    {
+        $response = $this->getClient()->request(
+            self::POST,
+            $this->getRealPath(self::ENDPOINT_SIMULATE),
+            [
+                self::JSON => $simulate->toArray(false)
             ]
         );
 

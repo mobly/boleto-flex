@@ -19,4 +19,9 @@ interface Endpoint
      * @const string
      */
     const ENDPOINT_TRANSACTION = '/transactions';
+
+    /**
+     * @const string
+     */
+    const ENDPOINT_SIMULATE= '/transactions/simulate';
 }
