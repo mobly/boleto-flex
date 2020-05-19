@@ -189,3 +189,32 @@ try {
     die($e->getMessage());
 }
 ```
+
+Simulate:
+
+``` PHP
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Mobly\Boletoflex\Sdk\Transactions\Simulate;
+
+$simulate = new Simulate();
+$simulate->setBuyer($buyer);
+$simulate->setReference('12345');
+$simulate->setSeller($seller);
+$simulate->setSource($source);
+$simulate->setShipping($shipping);
+$simulate->setCurrency('BRL');
+$simulate->setPayment($payment);
+$simulate->setCart($cart);
+
+try {
+    $response = $client->simulate($simulate);
+    echo $response->getStatusCode();
+    echo $response->getBody();
+    exit;
+
+} catch (\GuzzleHttp\Exception\GuzzleException $e) {
+    die($e->getMessage());
+}
+``` 
