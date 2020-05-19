@@ -61,7 +61,7 @@ abstract class AbstractTransaction
                 continue;
             }
 
-            if (($this->$property == 0 && null !== $this->$property) || !empty($this->$property)) {
+            if (null !== $this->$property || !empty($this->$property)) {
                 $data[$property] = $this->$property;
             }
         }

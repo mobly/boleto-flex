@@ -5,6 +5,7 @@ require __DIR__ . '/vendor/autoload.php';
 use Mobly\Boletoflex\Sdk\Client;
 use Mobly\Boletoflex\Sdk\Entities\Source;
 use Mobly\Boletoflex\Sdk\Transactions\PreApproval;
+use \Mobly\Boletoflex\Sdk\Transactions\Simulate;
 use Mobly\Boletoflex\Sdk\Entities\Buyer;
 use Mobly\Boletoflex\Sdk\Entities\Shipping;
 use Mobly\Boletoflex\Sdk\Entities\Address;
@@ -157,6 +158,27 @@ $preApprovalTransaction->setPayment($payment);
 
 try {
     $response = $client->preApproval($preApprovalTransaction);
+    echo $response->getStatusCode();
+    echo $response->getBody();
+    exit;
+
+} catch (\GuzzleHttp\Exception\GuzzleException $e) {
+    die($e->getMessage());
+}
+
+// Simulate
+$simulate = new Simulate();
+$simulate->setBuyer($buyer);
+$simulate->setReference('12345');
+$simulate->setSeller($seller);
+$simulate->setSource($source);
+$simulate->setShipping($shipping);
+$simulate->setCurrency('BRL');
+$simulate->setPayment($payment);
+$simulate->setCart($cart);
+
+try {
+    $response = $client->simulate($simulate);
     echo $response->getStatusCode();
     echo $response->getBody();
     exit;
