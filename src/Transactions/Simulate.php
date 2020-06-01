@@ -203,5 +203,4 @@ class Simulate extends AbstractTransaction
     {
         $this->currency = $currency;
     }
-
 }
